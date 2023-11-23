@@ -10,14 +10,15 @@
 <header>
 		<nav>
 			<ul>
-				<li><a href="index.php">Главная</a></li>
-				<li><a href="menu.php">Меню</a></li>
-				<li><a href="login.php">Войти</a></li>
-				<li><a href="register.php">Регистрация</a></li>
-				<li><a href="cart.php">Корзина</a></li>
+				<li><a href="index.php" class="active">Главная</a></li>
+				<li><a href="menu.php" class="active">Меню</a></li>
+				<li><a href="login.php" class="active">Войти</a></li>
+				<li><a href="register.php" class="active">Регистрация</a></li>
+				<li><a href="cart.php" class="active">Корзина</a></li>
 			</ul>
 		</nav>
 	</header>
+    <main class="parent">
 <?php
 session_start();
 
@@ -65,7 +66,7 @@ function generateCartItems() {
             $row = $result->fetch_assoc();
             $price = $row["price"];
             $totalPrice += $price;
-            $cartItems[] = "<li>".$row["term"]." - ".$price." руб. <button onclick='removeFromCart(".$productId.")'>Удалить</button></li>";
+            $cartItems[] = "<li>".$row["term"]." - ".$price." руб. <button style='position:static;margin: 30px;' onclick='removeFromCart(".$productId.")'>Удалить</button></li>";
         }
     }
 
@@ -75,39 +76,16 @@ function generateCartItems() {
     return implode("", $cartItems);
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Корзина</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script.js"></script>
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">Меню</a></li>
-				<li><a href="login.php">Войти</a></li>
-				<li><a href="register.php">Регистрация</a></li>
-				<li><a href="cart.php">Корзина</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
 		<section class="cart">
 			<h2>Корзина</h2>
 			<ul id="cart-items">
 				<?php echo generateCartItems(); ?>
 			</ul>
-			<a href="#" class="btn">Оформить заказ</a>
+			<a href="#" class="active">Оформить заказ</a>
 		</section>
 	</main>
 </body>
-<footer>
+<footer class="f">
         Сформировано <?php echo date('d.m.Y в H:i:s'); ?>
     </footer> 
 </html>

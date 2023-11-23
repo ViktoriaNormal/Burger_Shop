@@ -11,22 +11,23 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="index.php" class="link">Главная</a></li>
-				<li><a href="menu.php" class="link">Меню</a></li>
-				<li><a href="login.php" class="link">Войти</a></li>
-				<li><a href="register.php" class="link">Регистрация</a></li>
-				<li><a href="cart.php" class="link">Корзина</a></li>
-				<li><a href="form.php" class="link">Оставить обратную связь </a></li>
+				<li><a href="index.php" class="active">Главная</a></li>
+				<li><a href="menu.php" class="active">Меню</a></li>
+				<li><a href="login.php" class="active">Войти</a></li>
+				<li><a href="register.php" class="active">Регистрация</a></li>
+				<li><a href="cart.php" class="active">Корзина</a></li>
+				<li><a href="form.php" class="active">Оставить обратную связь </a></li>
 			</ul>
 		</nav>
 	</header>
-	<main>
+	<main class="parent">
+	<div>
 		<section>
-			<h1 class="title">Добро пожаловать в нашу бургерную!</h1>
+			<h1>Добро пожаловать в нашу бургерную!</h1>
 			<p class="text">Мы предлагаем лучшие бургеры в городе.</p>
 		</section>
 		<section class="menu">
-			<h2 class="title">Наше меню</h2>
+			<h2>Наше меню</h2>
 			<ul class="menu-items">
 				<?php
 				session_start();
@@ -45,7 +46,7 @@
 				if ($result->num_rows > 0) {
 				    // Вывод списка продуктов
 				    while($row = $result->fetch_assoc()) {
-				        echo "<li>".$row["term"]." - ".$row["price"]." руб. <button onclick='addToCart(".$row["id_burger"].")'>Добавить в корзину</button></li>";
+				        echo "<li class='link'>".$row["term"]." - ".$row["price"]." руб. <button onclick='addToCart(".$row["id_burger"].")'>Добавить в корзину</button></li>";
 				    }
 				} else {
 				    echo "Нет продуктов для отображения.";
@@ -55,6 +56,8 @@
 				?>
 			</ul>
 		</section>
+		</div>
+		<div class="div2"><img class="photo" src="background.jpg"></div>
 	</main>
 
   <script type="text/javascript">
@@ -71,11 +74,11 @@
               });
       }
   </script>
-
+</body>
+<div>
 <footer>
         Сформировано <?php echo date('d.m.Y в H:i:s'); ?>
-    </footer> 
-
-</body>
+    </footer>
+</div>
 </html>
 

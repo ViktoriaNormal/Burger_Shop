@@ -23,7 +23,7 @@ a:hover  {
 
 /* Common */
 
-aside, nav, footer, section, main {
+aside, nav, header, footer, section, main {
 	display: block;
 }
 
@@ -155,6 +155,7 @@ legend {
     line-height: normal;
     font-weight: normal;
     margin-bottom: 0px;
+    position: fixed;
   }
   nav ul {
     list-style-type: none;
@@ -190,14 +191,6 @@ legend {
     margin-left: 40px;
     margin-top: 60px;
   }
-  .menu-items {
-    color: #ffe9a1;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-size: 25px;
-    line-height: normal;
-    font-weight: normal;
-  }
   h1{
     color: #ffe9a1;
     font-family: 'Anybody';
@@ -206,24 +199,6 @@ legend {
     line-height: normal;
     font-weight: normal;
     margin-bottom: 30px;
-  }
-  h2{
-    color: #ffe9a1;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-size: 40px;
-    line-height: normal;
-    font-weight: normal;
-    margin-bottom: 30px;
-  }
-  .text{
-    color: #ffe9a1;
-    font-family: 'Anybody';
-    font-style: normal;
-    font-size: 28px;
-    line-height: normal;
-    font-weight: normal;
-    margin-bottom: 50px;
   }
   button{
     background-color: #ffda61;
@@ -235,55 +210,28 @@ legend {
     font-size: 18px;
     line-height: normal;
     font-weight:bolder;
-    left: 430px;
     position: absolute;
     width: 300px;
+    margin-top: 50px;
   }
-  .link{
-    margin-bottom: 50px;
-    margin-right: 30px;
-    color: #fff4ca;
+  label{
+    color: #ffe9a1;
     font-family: 'Anybody';
-    font-style: normal;
+    font-style:normal;
     font-size: 22px;
     line-height: normal;
-    font-weight: normal;
+    font-weight:normal;
+    margin-bottom: 30px;
+    margin-right: 20px;
   }
-  .parent > div{
-    width: 50%;
-    float: left;
-  }
-  .div2{
-    padding-top: 30px;
-  }
-  .photo{
-    width: 100vh;
-    height: 100vh;
-  }
-  img{
-    width: 600px;
-    height: 400px;
-    margin: 30px;
-    border-radius: 10px;
-  }
-  .f{
-    width: 100%;/*на всю ширину*/
-    display: flex;
-    justify-content: center;/*в центре по горизонтали*/
-    align-items: center;/*в центре по вертикали*/
-    flex-direction: column;
-    width: 100%;
-    height: 100px;
-    bottom: 0px;
-    color: #ffe9a1;
-    background-color: #212121;
-    padding: 30px;
-    bottom: 0;
+  .inputfield{
+    width: 300px;
+    height: 30px;
     font-family: 'Anybody';
-    font-style: normal;
-    font-size: 30px;
+    font-style:normal;
+    font-size: 22px;
     line-height: normal;
-    font-weight: normal;
-    margin-bottom: 0px;
-    position: fixed;
+    font-weight:normal;
+    margin-bottom: 30px;
+    border-radius: 5px;
   }
