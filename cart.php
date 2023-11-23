@@ -9,11 +9,12 @@
 <header>
 		<nav>
 			<ul>
-				<li><a href="index.php" class="active">Главная</a></li>
+            <li><a href="index.php" class="active">Главная</a></li>
 				<li><a href="menu.php" class="active">Меню</a></li>
 				<li><a href="login.php" class="active">Войти</a></li>
 				<li><a href="register.php" class="active">Регистрация</a></li>
 				<li><a href="cart.php" class="active">Корзина</a></li>
+				<li><a href="form.php" class="active">Оставить обратную связь </a></li>
 			</ul>
 		</nav>
 	</header>

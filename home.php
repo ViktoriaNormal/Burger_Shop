@@ -11,12 +11,12 @@
 <header>
 		<nav>
 			<ul>
-				<li><a href="index.php">Главная</a></li>
-				<li><a href="menu.php">Меню</a></li>
-				<li><a href="login.php">Войти</a></li>
-				<li><a href="register.php">Регистрация</a></li>
-				<li><a href="cart.php">Корзина</a></li>
-				<li><a href="form.php">Оставить обратную связь </a></li>
+            <li><a href="index.php" class="active">Главная</a></li>
+				<li><a href="menu.php" class="active">Меню</a></li>
+				<li><a href="login.php" class="active">Войти</a></li>
+				<li><a href="register.php" class="active">Регистрация</a></li>
+				<li><a href="cart.php" class="active">Корзина</a></li>
+				<li><a href="form.php" class="active">Оставить обратную связь </a></li>
 			</ul>
 		</nav>
 	</header>
@@ -35,4 +35,12 @@
     if (isset($_POST['file']) & $_POST['file'] != '') echo '<label class="label_box">Вы приложили следующий файл: '.$_POST['file'].'<p></label>';
     echo '<a class="text1" href="index.php?N='.$_POST['name'].'&E='.$_POST['email'].'&S='.$_POST['radio'].'" style="background-color:white; padding:5px; color: black; border-radius: 7px; ">Заполнить снова</a>';
     ?>
-</form>
+    </form>
+    </main>
+</body>
+<div>
+<footer>
+        Сформировано <?php echo date('d.m.Y в H:i:s'); ?>
+    </footer> 
+</div>
+</html>
