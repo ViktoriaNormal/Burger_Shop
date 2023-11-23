@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Бургерная</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script.js"></script>
 </head>
 <header>
 		<nav>
@@ -24,7 +23,7 @@ session_start();
 
 // Проверяем, есть ли уже массив корзины в сессии
 if (!isset($_SESSION["cart"])) {
-    $_SESSION["cart"] = array();
+    $_SESSION["cart"] = array(); 
 }
 
 // Добавление продукта в корзину

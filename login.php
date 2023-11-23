@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Бургерная</title>
 	<link rel="stylesheet" href="stylelogin.css">
-	<script src="script.js"></script>
 </head>
 <body>
 <header>
@@ -38,6 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $_SESSION["username"] = $username;
 
+        if (isset($_SESSION["cart"])) {
+            $_SESSION["cart"] = array(); 
+        }
         header("Location: index.php");
         exit();
     } else {
