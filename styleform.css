@@ -1,0 +1,351 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+
+/* anybody-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/anybody-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* anybody-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/anybody-v11-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* anybody-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/anybody-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* anybody-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Anybody';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/anybody-v11-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  html{
+    box-sizing: border-box;
+  }
+  *, *::before, *::after{
+    box-sizing: inherit;
+  }
+
+  body{
+    background-color: #000000;
+    font-family: 'Anybody';
+    font-style: normal;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+    color: #000000;
+  }
+
+  .prev_content{
+    width: 50%;
+    float: left;
+  }
+  .main_content{
+    width: 50%;
+    float: left;
+  }
+
+  .preview_text{
+    padding-top: 76px;
+    padding-left: 57px;
+  }
+  .ask_me{
+    width: 472px;
+    height: 162px;
+    flex-shrink: 0;
+    margin-bottom: 10;
+    color: #FFF;
+    font-family: Anybody;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  .city{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  .text{
+    width: 639px;
+    height: 61px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Anybody;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .rect_line{
+    width: 200px;
+    height: 10px;
+    flex-shrink: 0;
+    border-radius: 10px 0px 0px 10px;
+    background: #FFF;
+  }
+
+  .form{
+    padding-top: 110px;
+    padding-bottom: 44px;
+    padding-left: 170px;
+  }
+  .form_inside{
+    width: 450px;
+    height: 650px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #FFF;
+  }
+  .form_content{
+    padding-top: 39px;
+    padding-left: 75px;
+    margin-bottom: 19px;
+  }
+  .form_field{
+    color: #000;
+    font-family: Anybody;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .data_field{
+    width: 300px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #F0F0F0;
+  }
+  #username, #email{
+    height: 60px;
+    flex-shrink: 0;
+  }
+  :placeholder-shown{
+    padding-top: 5px;
+    padding-left: 24px;
+    color: #00000021;
+    font-family: Anybody;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .type{
+    color: #000;
+    font-family: Anybody;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .selection{
+    width: 230px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #000;
+    color: #FFF;
+    font-family: Anybody;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  #appeal{
+    width: 230px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    text-align: center;
+    color: #FFF;
+    font-family: Anybody;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .check{
+    width: 24px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #F0F0F0;
+  }
+  #data_process{
+    width: 24px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 7px;
+  }
+  .agree{
+    color: #000;
+    font-family: Anybody;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .about_us{
+    color: #000;
+    font-family: Anybody;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .internet, .friends{
+    color: #000;
+    font-family: Anybody;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    float: left;
+    width:180px;
+  }
+  .radio{
+    width: 24px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #F0F0F0;
+  }
+  #inter, #frien{
+    width: 24px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #F0F0F0;
+  }
+  .send{
+    margin-left: 45px;
+    width: 230px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #000;
+    color: #FFF;
+    font-family: Anybody;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .form * {
+    margin-bottom: 4px;
+  }
+  .text1{
+    color: #ffffff;
+    font-family: Anybody;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
